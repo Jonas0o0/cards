@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Cards</h1>
+        </nav>
+    </header>
+    
+    <section class="black">
+        <div class="card card1"><h1>Boule</h1><span class="boule"></span></div>
+        <div class="card card2"><h1>Loading</h1><div class="linebox"><div class="line"></div></div></div>
+        <div class="card card3"><h1>Soon</h1></div>
+        <div class="card card4"><h1>Soon</h1></div>
+        <div class="card card5"><h1>Soon</h1></div>
+    </section>
+
+    <section class="green">
+        
+    </section>
+    
+    
+
+    <footer>
+        <p>_Disigned by Jonas0o0&copy_</p>
+    </footer>
+
+    <script>
+        const cadr1 = document.querySelector('.card1')
+        const cadr2 = document.querySelector('.card2')
+        const cadr3 = document.querySelector('.card3')
+        const cadr4 = document.querySelector('.card4')
+        const cadr5 = document.querySelector('.card5')
+
+
+        cadr1.addEventListener('click', () => {
+            cadr1.classList.toggle('flip')
+        })
+
+        cadr2.addEventListener('click', () => {
+            cadr2.classList.toggle('flip')
+        })
+
+        cadr3.addEventListener('click', () => {
+            cadr3.classList.toggle('flip')
+        })
+
+        cadr4.addEventListener('click', () => {
+            cadr4.classList.toggle('flip')
+        })
+
+        cadr5.addEventListener('click', () => {
+            cadr5.classList.toggle('flip')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.black{
+    background-color: #333;
+}
+.green{
+    background-color: rgb(94, 94, 94);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+    color: rgb(58, 58, 58);
+    box-shadow: 0px 10px 15px 0px rgb(73, 73, 73);
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px;
+}
+
+.box{
+    margin: 50px;
+    height: 250px;
+    width: 150px;
+    background-color: red;
+}
+
+.card{
+    background-color: #111;
+    width: 200px;
+    height: 300px ;
+    border-radius: 25px 10px 25px 10px;
+    box-shadow: 0px 15px 12px 0px #000;
+    margin: 20px;
+    transition: 1.5s all;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.card h1{
+    position: absolute;
+    color: #fff;
+    transform: perspective(500px) translateZ(25px);
+
+ }
+
+.flip{
+    transform: perspective(500px) rotateY(180deg);
+
+}
+
+.card:hover h1{
+    transition: .5s ease;
+    text-decoration: underline;
+}
+
+.flip .boule{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    background: radial-gradient(100px, rgb(173, 9, 9), #000);
+    transform: translateZ(-1px);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    10%{
+        height: 100px;
+        width: 100px;
+    }
+    50%{
+        height: 60px;
+        width: 120px;
+        transform: translateY(130px);
+    }
+    60%{
+        height: 120px;
+        width: 60px;
+    }
+}
+
+.flip .linebox{
+    position: relative;
+    transform: translateZ(-1px);
+    padding: 2px;
+    width: 80%;
+    height: 20px;
+    border: 2px solid rgb(0, 63, 92);
+    border-radius: 20px;
+}
+
+.flip .linebox .line{
+    position: absolute;
+    right: 2px;
+    transform: rotateY(180deg);
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgb(54, 141, 65);
+    animation: loading 2s infinite cubic-bezier(0,0,0,0);
+}
+
+@keyframes loading {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(221, 221, 221);
+    color: rgb(58, 58, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    padding: 15px;
+    border-top: 10px solid rgb(120, 120, 120);
+}
